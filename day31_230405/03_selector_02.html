@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id1 적용된 요소 스타일 지정 */
+        /* 배경색 : orange , 글자색 : white */
+        #id1 {
+            background-color: orange;
+            /* 다양한 색상 표현 방법이 있다 */
+            /* color: white; */
+            /* rgb = 빛의 3원색 값은 0~255까지이다 */
+            /* color: rgb(255, 255, 255); */
+            /* 16진수로 표현하는 방법 */
+            color: #9b5252;
+        }
+
+        #id2 {
+            background-color: red;
+            color: bisque;
+        }
+
+        .class1 {
+            color: red;
+        }
+
+        .class2 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="id1">
+        div태그입니다
+    </div>
+    <!-- 이런경우 id가 class보다 출력에 우선순위이기 때문에
+        class는 적용이 안된다 -->
+    <p id="id2" class="class2 class1">
+        p태그입니다
+    </p>
+    <!-- class는 동시에 적용할때 공백하나만 주면 된다 -->
+    <div id="id3" class="class1 class2">
+        두번째 div 태그입니다
+    </div>
+    <h2 id="id4" class="class2 class1">
+        h2태그입니다
+    </h2>
+    <!-- class는 하나의 태그에 중복 사용이 가능하다
+        하지만 id는 하나의 태그에 하나만 적용 가능하다 -->
+    <div class="class1 class2">
+        안녕하세요
+    </div>
+</body>
+
+</html>
