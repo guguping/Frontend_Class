@@ -1,1 +1,46 @@
 <!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* div 태그로 작성된 요소에 폰트 적용 */
+        * {
+            font-family: 'Dongle', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- href속성: 목적지 -->
+    <a href="https://www.google.com">구글홈페이지</a>
+    <!-- target속성 :_blank를 설정하면 새창에 열린다 -->
+    <a href="https://www.google.com" target="_blank">구글홈페이지</a>
+
+    <!-- 이미지 출력 -->
+    <!-- img 속성은 마무리 주석이 없다 -->
+    <!-- src : 출력할 이미지 경로 -->
+    <!-- 상대경로 : 현재파일(이미지를 출력하고 싶은파일)을 기준으로
+                    이미지 위치를 찾아가는 것
+        절대경로 : 해당 파일의 위치의 전체 경로를 표현하는 것
+                예) D:\front\front_class\images\google.png -->
+    <img src="../images/guppy.png" alt="">
+    <!-- width = "100" 가로의 : 100픽셀
+        height ="100"세로의 100픽셀 -->
+    <img src="../images/guppy.png" width="100" height="100" alt="">
+    <!-- alt : 이미지가 보이지 않을 경우 대체 이미지 -->
+    <img src="../images/guppys.png" width="100" height="100" alt="이미지가 안보이면 보여요">
+
+    <!-- 구글 로고이미지를 클릭하면 구글 홈페이지로 이동 -->
+    <a href="https://www.google.com/" target="_blank"><img src="../images/guppy.png" alt=""></a>
+</body>
+<div>모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를 인정하는</div>
+<p>여기는 어떻게 보일까요?</p>
+
+</html>
