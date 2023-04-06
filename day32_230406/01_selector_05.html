@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: red;
+            background-color: black;
+        }
+
+        /* 가상 선택자(pseudo selector) 
+            a태그에 마우스가 올라갔을때 hover를 적용*/
+        a:hover {
+            color: white;
+            background-color: hotpink;
+        }
+
+        /* 꼭 a태그를 사용한 링크가 아닌 일반 텍스트에도 사용 가능하다 */
+        div:hover {
+            background-color: orangered;
+            color: white;
+        }
+
+        /* css는 절차지향과 같은 느낌으로 위에서 아래로 실행한다
+            그렇다고 모든 결과를 보여주는게 아닌 
+            마지막의 실행 결과만 보여준다 */
+        div p {
+            display: none;
+        }
+
+        /* div에 마우스를 올리면 해당 자손에 대해 적용 
+            none으로 가린걸 block 요소로 보여준다 */
+        div:hover p {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">링크부분</a>
+    <div>
+        div 입니다.
+        <p>안녕하세요</p>
+    </div>
+</body>
+
+</html>
