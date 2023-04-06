@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            /*  border 는 선을 뜻한다
+                solid 는 선의 모양이다 
+                외에 다양한 선모양의 코드가 있다 */
+            border-collapse: collapse;
+            /* 선을 합친다는 뜻이다 */
+            padding: 10px;
+            /* 안쪽 여백을 지정할 때 사용한다 (모든 여백이 10px씩 늘어난다) */
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>특성</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>팬텀</td>
+                <td>어둠</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>파이리</td>
+                <td>불</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
