@@ -11,11 +11,11 @@
             grid를 지정해야함 */
         .container {
             display: grid;
-            /* 한줄에 배치할 요소 갯수 */
+            /* 행의 갯수 */
             grid-template-columns: auto auto auto;
-            /* 세로 사이의 간격 */
+            /* 행의 간격 */
             column-gap: 10px;
-            /* 가로 사이의 간격 */
+            /* 열의 간격 */
             row-gap: 10px;
         }
 
@@ -40,8 +40,8 @@
         .item5 {
             /* 가로 번호 */
             grid-row: 3;
-            /* 세로의 1~4까지의 칸 사용 */
-            grid-column: 1/4;
+            /* 가로의 1~4까지의 칸 사용 */
+            grid-column: 1/5
         }
     </style>
 </head>
