@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*body {
+            height: 3000px;
+        }
+
+        .menu {
+            position: sticky;
+            top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: dodgerblue;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: inline-block;
+            padding: 15px 70px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        li a:hover {
+            background-color: hotpink;
+        } */
+
+        /* .active {
+            background-color: violet;
+        } */
+
+        /* .container {
+            border: 3px solid lightskyblue;
+            background-color: rgb(238, 231, 222);
+        }
+
+        h2 {
+            text-align: center;
+        }*/
+
+        .header {
+            border: 3px solid lightskyblue;
+        }
+
+        .nav {
+            border: 3px solid lightskyblue;
+            float: left;
+            width: 30%;
+        }
+
+        .section {
+            border: 3px solid lightskyblue;
+            float: left;
+            width: 70%;
+        }
+
+        /* float 해제 */
+        .main::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .footer {
+            border: 3px solid lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="menu">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#" class="active">저는요</a>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact Me</a>
+            </li>
+        </ul>
+    </div> -->
+    <div class="container">
+        <div class="header"> <!-- 제목 -->
+            <h2>header 영역</h2>
+        </div>
+        <div class="main">
+            <div class="nav"> <!-- 소 내용 -->
+                <h2>nav 영역</h2>
+            </div>
+            <div class="section"> <!-- 내용 -->
+                <h2>section 영역</h2>
+            </div>
+        </div>
+        <div class="footer"> <!-- 웹의 최하단 -->
+            <h2>footer 영역</h2>
+        </div>
+    </div>
+</body>
+
+</html>
