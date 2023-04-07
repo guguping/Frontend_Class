@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_layout</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /* height: auto; */
+        }
+
+        .column {
+            /* height: auto; */
+        }
+
+        .div1 {}
+    </style>
+</head>
+
+<body>
+    <div class="header" style="background-color: gray;">
+        <h2>header 영역</h2>
+    </div>
+    <div class="container">
+        <div class="column div1" style="background-color: dodgerblue;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+            lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+            eget,
+            auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+            lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
+            nisi,
+            sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
+            dui
+            eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+            porta. Cras ac leo purus. Mauris quis diam velit.
+        </div>
+        <div class="column div2" style="background-color: tomato;">
+            두번째 영역
+        </div>
+        <div class="column div3" style="background-color: violet;">
+            세번째 영역
+        </div>
+    </div>
+    <div class="footer" style="background-color: aquamarine;">
+        <h2>footer 영역</h2>
+    </div>
+</body>
+
+</html>
