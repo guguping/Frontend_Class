@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="herder">
+        <a href="https://www.naver.com/" target="_blank">
+            <img src="../images/화면 캡처 2023-04-10 094533.png" alt="">
+        </a>
+    </div>
+    <div class="container">
+        <form action="member" method="post">
+            <label for="id">아이디</label><br>
+            <input type="text" id="id" name="member_id"><br>
+            <label for="password">비밀번호</label><br>
+            <input type="password" id="password" name="member_pw"><br>
+            <label for="pw1">비밀번호 재확인</label><br>
+            <input type="text" id="pw1" name="member_pw1"><br>
+            <label for="name">이름</label><br>
+            <input type="text" id="name" name="member_name"><br>
+            <label for="birth_year">생년월일</label><br>
+            <input type="text" id="birth_year" name="birth_year" placeholder="년(4자)">
+            <select name="birth_month" id="">
+                <option value="">월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <input type="text" id="birth_day" name="birth_day" placeholder="일"><br>
+            <label for="gender">성별</label><br>
+            <select name="gender" id="">
+                <option value="">성별</option>
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+                <option value="선택 안함">선택 안함</option>
+            </select><br>
+            <label for="email">본인 확인 이메일 (선택)</label><br>
+            <input type="text" id="email" name="member_email" placeholder="선택입력"><br>
+            <label for="mobile">휴대전화</label><br>
+            <select name="nation_code" id="">
+                <option value="33">프링스 +33</option>
+                <option value="81">일본 +81</option>
+                <option value="82" selected>대한민국 +82</option>
+            </select><br>
+            <input type="text" id="mobile" name="mobile" placeholder="전화번호 입력">
+            <!-- onclick 속성: onclick 속성을 적용한 요소(태그)에 click 이벤트가 발생하면
+                                실행할 javascript 함수 또는 문법을 지정함 
+                            아래 버튼을 클릭하면 hello 함수 호출-->
+            <input type="button" value="인증번호 받기" onclick="hello()"><br>
+            <input type="text" id="ck" name="number_ck" placeholder="인증번호 입력하세요"><br>
+            <input type="submit" value="가입하기">
+        </form>
+    </div>
+    <div class="footer">
+        <a href="https://policy.naver.com/rules/service.html" target="_blank"><sup>이용 약관</sup></a>
+        <a href="https://policy.naver.com/policy/privacy.html" target="_blank"><sup>개인정보처리방침</sup></a>
+        <a href="https://policy.naver.com/rules/disclaimer.html" target="_blank"><sup>책임의 한계와 법적고지</sup></a>
+        <a href="https://help.naver.com/service/5640/category/bookmark?lang=ko"><sup>회원정보 고객센터</sup></a><br>
+        <a href="https://www.navercorp.com/">@NAVER Corp.</a>
+    </div>
+</body>
+<script>
+    // function hello() {
+
+    // }
+
+    // 화살표 함수(arrow function)
+    const hello = () => {
+        console.log("콘솔에 보여집니다");
+        alert("alert으로 보여집니다.");
+    }
+</script>
+
+</html>
