@@ -10,8 +10,20 @@
 
 <body>
     <h2>계산기</h2>
-    number1: <input type="text" id="id1" name="id2">
-    number2: <input type="text" id="id1" name="id2">
+    number1: <input type="text" id="id1" name="id1"> <br>
+    number2: <input type="text" id="id2" name="id2"> <br>
+    계산결과: <input type="text" id="result1" name="result1"><br>
+    <input type="button" value="계산" onclick="fun1()">
 </body>
+<script>
+    const fun1 = () => {
+        const num1 = document.getElementById('id1');
+        console.log(num1.value);
+        const num2 = document.getElementById('id2');
+        console.log(num2.value);
+        const num3 = document.getElementById('result1');
+        num3.value = Number(num1.value) + Number(num2.value);
+    }
+</script>
 
 </html>

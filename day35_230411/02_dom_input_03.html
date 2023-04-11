@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+
+<body>
+    JAVA 성적: <input type="text" id="id1" name="id1"><br>
+    html 성적: <input type="text" id="id2" name="id2"><br>
+    학점: <input type="text" id="result1" name="result1"><br>
+    <h1 id="id3"></h1>
+    <input type="button" value="학점계산" onclick="fun1()">
+</body>
+<script>
+    const fun1 = () => {
+        const num1 = document.getElementById('id1');
+        const num2 = document.getElementById('id2');
+        const num3 = document.getElementById('result1');
+        const num4 = document.getElementById('id3');
+        const avg = (Number(num1.value) + Number(num2.value)) / 2;
+
+        if (avg >= 90) {
+            num3.value = "A";
+            num4.innerHTML = "당신의 학점은 A입니다";
+        } else if (avg >= 80) {
+            num3.value = "B";
+            num4.innerHTML = "당신의 학점은 B입니다";
+        } else if (avg >= 70) {
+            num3.value = "C";
+            num4.innerHTML = "당신의 학점은 C입니다";
+        } else if (avg >= 60) {
+            num3.value = "D";
+            num4.innerHTML = "당신의 학점은 D입니다";
+        } else {
+            num3.value = "F";
+            num4.innerHTML = "당신의 학점은 F입니다";
+        }
+    }
+</script>
+
+</html>
