@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h2>오늘은 4월 11일 화요일</h2>
+    <h3>오늘은 35일차</h3>
+    <div id="id1"></div>
+    <div id="id2"></div>
+
+
+
+    <!-- 
+        버튼은 3개가 있고 각각은 다른 함수를 호출함
+        1.button을 클릭했을 때 fun1함수를 호출하고 h2태그의 innerText값을
+        콘솔에 출력
+        2.button을 클릭했을 때 fun2함수를 호출하고 h3태그의 innerHTML값을
+        alert으로 출력
+        3.button을 클릭했을 때 fun3함수를 호출하고 h2,h3태그의 innerText값을
+        id1이 적용된 div의 innerTEXT 값으로 적용하여 화면에 보이게
+        4.button을 클릭했을 때 fun4함수를 호출하고 id2가 적용된 div에
+        아래 ex id가 적용된 태그 처럼 ul, li를 이용하여 1부터 100까지 출력
+    -->
+    <!-- <div id="ex">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            중간생략
+            <li>100</li>
+        </ul>
+    </div> -->
+    <button onclick="fun1()">fun1</button>
+    <button onclick="fun2()">fun2</button>
+    <button onclick="fun3()">fun3</button>
+    <button onclick="fun4()">fun4</button>
+</body>
+<script>
+    const a = document.getElementsByTagName("h2");
+    const fun1 = () => {
+        console.log(a[0].innerText);
+    }
+
+    const b = document.getElementsByTagName("h3");
+    const fun2 = () => {
+        alert(b[0].innerHTML);
+    }
+
+    const divAll1 = document.getElementById('id1');
+    const fun3 = () => {
+        divAll1.innerText = a[0].innerText + " " + b[0].innerText;
+    }
+
+
+    const fun4 = () => {
+        // string 값으로 필요한 내용 그리기
+        const divAll2 = document.getElementById('id2')
+        // let ul = "<ul>";
+
+        // for (let i = 1; i <= 100; i++) {
+        //     ul += "<li>" + i + "</li>"
+        // }
+        // ul += "</ul>";
+        // divAll2.innerHTML = ul;
+
+        // javascript method 활용하기
+        const ul = document.createElement("ul");
+        console.log(ul);
+
+        for (let i = 1; i <= 100; i++) {
+            // li 태그 생성
+            const li = document.createElement("li");
+            // li 시작 종료 태그 사이에 i로 만들어진 숫자 텍스트 추가
+            li.appendChild(document.createTextNode(i));
+            // 만들어진 li를 ul의 자식 태그로 추가
+            ul.appendChild(li);
+        }
+
+        // 특정 요소에 자식 요소로 추가하기
+        divAll2.appendChild(ul);
+
+    }
+
+</script>
+
+</html>
