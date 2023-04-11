@@ -6,15 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dom_4</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <style>
-        table,
+        /* table,
         tr,
-        th,
-        td {
+        td,
+        th {
             border: 1px solid black;
             border-collapse: collapse;
             padding: 10px;
+            text-align: center;
         }
+
+        td {
+            width: 50px;
+        } */
     </style>
 </head>
 
@@ -31,18 +38,38 @@
         // console.log(divAll1);
         for (let i = 2; i <= 9; i++) {
             const tr = document.createElement("tr");
-            const td1 = document.createElement("td");
-            td1.appendChild(document.createTextNode(i + "단"))
-            tr.appendChild(td1);
-            table.appendChild(tr);
+            const th = document.createElement("th");
+            th.appendChild(document.createTextNode(i + "단"))
+            tr.appendChild(th);
             for (let j = 1; j <= 9; j++) {
-                const td2 = document.createElement("td");
-                td2.appendChild(document.createTextNode(i * j));
-                tr.appendChild(td2);
+                const td = document.createElement("td");
+                td.appendChild(document.createTextNode(i * j));
+                tr.appendChild(td);
             }
+            table.appendChild(tr);
         }
+
+        // class 추가
+        // table.classList.add('table', 'table-hover');
+        table.setAttribute('class', 'table table-hover');
         divAll1.appendChild(table);
     }
+
+    // const fun1 = () => {
+    //     const result = document.getElementById("id1");
+
+    //     let tableElement = "<table class='table table-hover'>";
+    //     for (let i = 2; i <= 9; i++) {
+    //         tableElement += "<tr>";
+    //         tableElement += "<td>" + i + "단</td>";
+    //         for (let j = 1; j <= 9; j++) {
+    //             tableElement += "<td>" + i * j + "</td>";
+    //         }
+    //         tableElement += "</tr>";
+    //     }
+    //     tableElement += "</table>";
+    //     result.innerHTML = tableElement;
+    // }
 
 </script>
 
