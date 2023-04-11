@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_4</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="id1">
+        <!-- 여기에 구구단이 출력됩니다 -->
+    </div>
+    <button onclick="fun1()">구구단 출력</button><br>
+</body>
+<script>
+    fun1 = () => {
+        const divAll1 = document.getElementById('id1');
+        const table = document.createElement("table")
+        // console.log(divAll1);
+        for (let i = 2; i <= 9; i++) {
+            const tr = document.createElement("tr");
+            const td1 = document.createElement("td");
+            td1.appendChild(document.createTextNode(i + "단"))
+            tr.appendChild(td1);
+            table.appendChild(tr);
+            for (let j = 1; j <= 9; j++) {
+                const td2 = document.createElement("td");
+                td2.appendChild(document.createTextNode(i * j));
+                tr.appendChild(td2);
+            }
+        }
+        divAll1.appendChild(table);
+    }
+
+</script>
+
+</html>
