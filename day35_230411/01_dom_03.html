@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 onclick="fun2()" id="id1">곧 점심시간</h2>
+</body>
+<script>
+    const fun2 = () => {
+        // 요소의 css속성 제어하기
+        const ele = document.getElementById('id1');
+        console.log(ele.style);
+        // 글자색을 노란색
+        ele.style.color = "red";
+    }
+</script>
+
+</html>
