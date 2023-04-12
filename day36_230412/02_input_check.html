@@ -33,6 +33,7 @@
         } else if (member_email.length < 5 || member_email.length > 20) {
             member_result.innerHTML = "5~20자자 이내로 입력해주세요."
         } else if (member_email.length >= 5 && member_email.length <= 20) {
+            member_result.style.color = "green";
             member_result.innerHTML = "좋아요."
         }
     }
