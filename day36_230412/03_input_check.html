@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <script src="../js/bootstrap.bundle.min.js"></script>
-
     <title>check</title>
     <style>
         div {
@@ -22,6 +21,7 @@
         <h6>비밀번호</h6>
         <input type="password" onblur="password_check()" class="form-control" id="member-password"
             name="memberPassword"> <i class="bi bi-lock-fill" id="lock1"></i>
+
         <h6 id="password-result"></h6>
         <h6>비밀번호확인</h6>
         <input type="password" onblur="password_confirm()" class="form-control" id="member-password1">
@@ -32,10 +32,8 @@
 <script>
     const password_check = () => {
         const member_password = document.getElementById("member-password").value;
-        const member_password1 = document.getElementById("member-password1").value;
         const lock1 = document.getElementById("lock1");
         const result = document.getElementById("password-result")
-        const result1 = document.getElementById("password-result1")
         lock1.className = "bi bi-lock-fill";
         if (member_password.length == 0) {
             result.style.color = "red";
@@ -71,7 +69,7 @@
             lock1.className = "bi bi-unlock-fill";
             lock1.style.color = "green";
             result1.style.color = "green";
-        } else if (member_password) {
+        } else if (member_password != member_password1) {
             result1.innerHTML = "일치하지 않습니다";
             lock1.style.color = "red";
             result1.style.color = "red";
