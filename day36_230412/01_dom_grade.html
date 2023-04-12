@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점계산</title>
+</head>
+
+<body>
+    JAVA 성적: <input type="text" id="java"><br>
+    html 성적: <input type="text" id="html"><br>
+    학점: <input type="text" id="grade"><br>
+    <h2 id="grade1"></h2>
+    <button onclick="grade()">학점계산</button>
+</body>
+<script>
+    const grade = () => {
+        const java = document.getElementById("java").value;
+        console.log(java.length);
+        const html = document.getElementById("html").value;
+        const avg = ((parseInt(java)) + parseInt(html)) / 2;
+        let grade = "";
+        if (avg >= 90) {
+            grade = "A";
+        } else if (avg >= 80) {
+            grade = "B";
+        } else if (avg >= 70) {
+            grade = "C";
+        } else if (avg > 60) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+        const result = document.getElementById("grade");
+        result.value = grade;
+        document.getElementById("grade1").innerHTML = "당신의 학점은 " + grade + "입니다."
+    }
+</script>
+
+</html>

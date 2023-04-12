@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onb</title>
+    <style>
+        #er {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    이메일<br><input type="text" id="length" onblur="check()"><br>
+    <samp id="er"></samp>
+</body>
+<script>
+    const check = () => {
+        const length = document.getElementById("length").value;
+        let er = document.getElementById("er");
+        if (length.length == 0) {
+            er.innerHTML = "필수입력입니다.";
+        } else if (length.length <= 4 || length.length >= 21) {
+            er.innerHTML = "5~20자로 입력해주세요."
+        } else if (length.length >= 5 && length.length <= 20) {
+            er.innerHTML = "좋아요."
+        }
+    }
+</script>
+
+</html>

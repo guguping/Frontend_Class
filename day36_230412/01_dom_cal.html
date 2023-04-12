@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+
+<body>
+    number1 : <input type="text" id="num1"> <br>
+    number2 : <input type="text" id="num2"><br>
+    계산결과 : <input type="text" id="result"><br>
+    <button onclick="cal()">계산</button>
+</body>
+<script>
+    const cal = () => {
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2");
+        console.log(typeof num1);
+        console.log(typeof num2.value);
+        console.log(num1 + num2.value);
+        // input태그만 value를 사용 가능하다
+        const sum = parseInt(num1) + parseInt(num2.value);
+        //  parseInt로 형변환
+        console.log(sum);
+        const result = document.getElementById("result");
+        result.value = sum;
+    }
+</script>
+
+</html>
