@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="../js/bootstrap.bundle.min.js"></script>
     <title>onb</title>
+    <style>
+        div {
+            margin: 100px;
+        }
+    </style>
 </head>
 
 <body>
-    <h6>이메일</h6>
-    <input type="text" class="form-control" onblur="email_check()" id="member-email" name="memberEamil"><br>
-    <h6 id="email-result"></h6>
+    <div>
+        <h6>이메일</h6>
+        <input type="text" class="form-control" onblur="email_check()" id="member-email" name="memberEamil"><br>
+        <h6 id="email-result"></h6>
+    </div>
 </body>
 <script>
     const email_check = () => {
         const member_email = document.getElementById("member-email").value;
+        const me = document.getElementById("me");
         let member_result = document.getElementById("email-result");
         member_result.style.color = "red";
         if (member_email.length == 0) {
