@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_eventlistener</title>
+
+</head>
+
+<body>
+    <!-- 이벤트 리스너(Event Listener) -->
+    <button onclick="fun1()">onclick으로 함수호출</button>
+    <button id="id1">이벤트리스너로 함수호출</button>
+    <button id="id2">이벤트리스너로 함수호출2</button>
+</body>
+<script>
+    const fun1 = () => {
+        console.log("함수호출됨");
+    }
+    const btn1 = document.getElementById("id1");
+    // btn1이 클릭되면 함수를 실행하도록 이벤트 리스너 적용
+    // function = 익명함수
+    btn1.addEventListener("click", function () {
+        console.log("이벤트리스너 함수 호출");
+    })
+    const btn2 = document.getElementById("id2");
+    //btn2를 클릭하면 fun1함수 호출
+    btn2.addEventListener("click", fun1);
+</script>
+
+
+</html>

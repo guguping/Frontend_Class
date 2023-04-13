@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_eventlistener</title>
+</head>
+
+<body>
+    <!-- 이메일입력 input
+        정규식 : 소문자 , 숫자 필수 8~16자 이내로
+        blur 이벤트를 이벤트 리스너로 적용 email_check함수 호출-->
+    이메일입력: <input type="text" id="id1"><br>
+    <sub id="id2"></sub>
+</body>
+<script>
+    const email_check = () => {
+        const blur2 = document.getElementById("id1").value;
+        const email_result = document.getElementById("id2");
+        const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{8,16}$/;
+        if (blur2.match(exp)) {
+            email_result.style.color = "green";
+            email_result.innerHTML = "좋아요";
+        } else {
+            email_result.style.color = "red";
+            email_result.innerHTML = "양식이 다릅니다";
+        }
+    }
+
+    // const blur1 = document.getElementById("id1");
+    // blur1.addEventListener("blur", email_check);
+    document.getElementById("id1").addEventListener("blur", email_check)
+</script>
+
+</html>
