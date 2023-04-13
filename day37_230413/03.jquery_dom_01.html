@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="id1">html</h2>
+    <h2 id="id2">javascript</h2>
+    <h2 id="id3">css</h2>
+
+    <h2 class="class1">spring</h2>
+    <h2 class="class2">springboot</h2>
+</body>
+<script>
+    //모든 h2 요소 가져오기
+    // const h2All1 = document.getElementsByTagName("h2");
+    //  jq
+    const h2All1 = $("h2");
+    console.log(h2All1);
+    // const h2All2 = document.querySelectorAll("h2");
+    // jq
+    const h2All2 = $("h2");
+    console.log(h2All2);
+
+    // id1이 적용된 요소 가져오기
+    const ele1 = document.getElementById("id1");
+    const ele1jq = $("#id");
+    console.log($("id1").text()); //innerText
+    console.log($("#id1").html()); // innerHTML
+    // class1이 적용된 모든 요소 가져오기
+    const ele3 = document.getElementsByClassName("class1");
+    const ele4 = document.querySelectorAll('.class2');
+    console.log($(".class1").html());
+    console.log($(".class1").text());
+    //h2태그중에서 class1이 적용된 모든 요소 가져오기
+    console.log($("h2.class1"));
+    console.log(document.querySelectorAll("h2.class1"));
+
+    //id2 요소의 text값을 jquery로 변경하기
+    $("#id2").text("jquery");
+</script>
+
+</html>

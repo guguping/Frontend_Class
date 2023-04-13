@@ -20,18 +20,22 @@
         const blur2 = document.getElementById("id1").value;
         const email_result = document.getElementById("id2");
         const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{8,16}$/;
-        if (blur2.match(exp)) {
+        if (blur2.length == 0) {
+            email_result.style.color = "red";
+            email_result.innerHTML = "필수 입력";
+        } else if (blur2.match(exp)) {
             email_result.style.color = "green";
             email_result.innerHTML = "좋아요";
         } else {
             email_result.style.color = "red";
-            email_result.innerHTML = "양식이 다릅니다";
+            email_result.innerHTML = "양식에 맞지 않음";
         }
     }
 
     // const blur1 = document.getElementById("id1");
     // blur1.addEventListener("blur", email_check);
     document.getElementById("id1").addEventListener("blur", email_check)
+    // 중간 과정을 생략하고 한줄로 사용가능하다
 </script>
 
 </html>
