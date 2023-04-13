@@ -13,8 +13,9 @@
 <body>
     <h2 id="id1">html</h2>
     <h2 id="id2">javascript</h2>
-    <h2 id="id3">css</h2>
-
+    <div id="div1">
+        <h2 id="id3">css</h2>
+    </div>
     <h2 class="class1">spring</h2>
     <h2 class="class2">springboot</h2>
 </body>
@@ -45,6 +46,32 @@
 
     //id2 요소의 text값을 jquery로 변경하기
     $("#id2").text("jquery");
+
+    // id3 요소의 text 값을 변수로 가져오기
+    // jq
+    // const id3Text = $("#id3").text();
+    const id3Text = document.getElementById("id3").innerText;
+    console.log(id3Text);
+
+    //id1 요소의 display 속성을 none으로 변경
+    document.getElementById("id1").style.display = "none";
+    // id1 요소의 display 속성을 다시 보여주기
+    document.getElementById("id1").style.display = "block";
+
+    // jq
+    $("#id1").hide();
+    $("#id1").show();
+
+    // id3 요소의 글자크기를 조절
+    document.getElementById("id3").style.fontSize = "100px";
+    // jq
+    $("#id2").css("font-size", "200px");
+
+    // 부모 요소 확인하기
+    // id3의 부모
+    console.log(document.getElementById("id3").parentNode);
+    // jq
+    console.log($("#id3").parent());
 </script>
 
 </html>
