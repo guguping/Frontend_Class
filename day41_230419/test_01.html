@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_01</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: blue;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: inline-block;
+        padding: 20px 50px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+
+    li a:hover {
+        background-color: red;
+    }
+
+    .nav {
+        border: 3px solid black;
+        float: left;
+        height: 400px;
+        width: 30%;
+    }
+
+    .section {
+        border: 3px solid black;
+        height: 400px;
+        float: left;
+        width: 70%;
+    }
+
+    .main::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .footer {
+        border: 3px solid black;
+        background-color: yellow;
+    }
+
+    #Sign-up {
+        text-align: center;
+    }
+
+    input {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">회원가입</a>
+                </li>
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div class="main">
+            <div class="nav">
+                <h2>nav 영역</h2>
+            </div>
+            <div class="section">
+                <h2>section 영역</h2>
+                <div id="Sign-up">
+                    <form action="/member_save" name="save_from" method="post" onsubmit="return login_check()">
+                        <div>
+                            <input type="text" id="login-id" onblur="loginId_check()" placeholder="이메일">
+
+                        </div>
+                        <div>
+                            <input type="text" id="login-pw" onblur="loginPw_check()" placeholder="비밀번호">
+
+                        </div>
+                        <div>
+                            <h6 id="login-result"></h6>
+                        </div>
+                        <button>로그인</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>footer 영역</h2>
+        </div>
+    </div>
+</body>
+<script>
+    const login_check = () => {
+        const loginId = document.getElementById("login-id");
+        const loginPw = document.getElementById("login-pw");
+        const result = document.getElementById("login-result");
+        if (!loginId_check()) {
+            loginId.focus();
+            return false;
+        } else if (!loginPw_check()) {
+            loginPw.focus();
+            return false;
+        } else {
+            return true;
+        }
+    };
+    const loginId_check = () => {
+        const loginId = document.getElementById("login-id");
+        const result = document.getElementById("login-result");
+        const expId = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/;
+        if (loginId.value.length == 0) {
+            result.style.color = "red";
+            result.style.filter = "drop-shadow(2px 2px 2px gray)";
+            result.innerHTML = "아이디를 입력해주세요";
+            return false;
+        } else if (!loginId.value.match(expId)) {
+            result.innerHTML = "올바른 형식이 아닙니다"
+        } else {
+            return true;
+        }
+    };
+
+    const loginPw_check = () => {
+        const loginPw = document.getElementById("login-pw");
+        const result = document.getElementById("login-result");
+        const expPw = /^(?=.*[A-z])(?=.*\d)(?=.*[!#$])[A-z\d!#$]{6,18}$/;
+        if (loginPw.value.length == 0) {
+            result.style.color = "red";
+            result.style.filter = "drop-shadow(2px 2px 2px gray)";
+            result.innerHTML = "비밀번호를 입력해주세요";
+            return false;
+        } else if (!loginPw.value.match(expPw)) {
+            result.innerHTML = "올바른 형식이 아닙니다"
+        } else {
+            return true;
+        }
+    };
+
+</script>
+
+</html>
